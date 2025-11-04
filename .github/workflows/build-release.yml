@@ -1,0 +1,51 @@
+# GitHub Actions Workflow for KTWU
+# This workflow will build, sign, and release the Kaizer Tech Windows Utility
+
+name: Build and Release KTWU
+
+on:
+  push:
+    branches: [ main ]
+    tags:
+      - 'v*'
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+        
+    # TODO: Add build steps for KTWU.Core.sln
+    # - name: Restore dependencies
+    #   run: dotnet restore KTWU.Core.sln
+    #   
+    # - name: Build solution
+    #   run: dotnet build KTWU.Core.sln --configuration Release --no-restore
+    #   
+    # - name: Publish application
+    #   run: dotnet publish KTWU.Core.sln --configuration Release --output ./publish
+    
+    # TODO: Add code signing step
+    # - name: Sign executable
+    #   run: |
+    #     # Sign with Kaizer Tech certificate
+    #     signtool sign /f KaizerTech.pfx /p ${{ secrets.CERT_PASSWORD }} ./publish/KTWU.exe
+    
+    # TODO: Add release creation step
+    # - name: Create Release
+    #   if: startsWith(github.ref, 'refs/tags/v')
+    #   uses: softprops/action-gh-release@v1
+    #   with:
+    #     files: ./publish/KTWU.exe
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
