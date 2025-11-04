@@ -19,6 +19,109 @@ Kaizer Tech's Windows Utility (KTWU) is a secure, modular, and modern Windows ut
 
 ---
 
+## 📥 Installation | التثبيت
+
+### 🚀 Quick Install (Recommended) | التثبيت السريع (موصى به)
+
+The easiest and most secure way to install KTWU is using our verified installation script. This script automatically:
+- ✅ Downloads the latest version from official sources
+- ✅ Verifies digital signatures for authenticity
+- ✅ Validates file integrity with SHA256 hash
+- ✅ Performs security checks on the executable
+- ✅ Launches the installer with proper permissions
+
+**English Instructions:**
+
+1. Open **Windows PowerShell** as Administrator
+   - Press `Win + X` and select "Windows PowerShell (Admin)" or "Terminal (Admin)"
+   
+2. Run the following command:
+
+```powershell
+irm "https://kaizer.tech/get" | iex
+```
+
+3. Follow the on-screen instructions
+4. The installer will verify the digital signature and launch automatically
+
+---
+
+**تعليمات باللغة العربية:**
+
+1. افتح **Windows PowerShell** كمسؤول
+   - اضغط على `Win + X` واختر "Windows PowerShell (Admin)" أو "Terminal (Admin)"
+   
+2. قم بتشغيل الأمر التالي:
+
+```powershell
+irm "https://kaizer.tech/get" | iex
+```
+
+3. اتبع التعليمات التي تظهر على الشاشة
+4. سيتحقق المثبت من التوقيع الرقمي ويبدأ تلقائيًا
+
+---
+
+### 🔒 Security Features | ميزات الأمان
+
+Our installation script includes multiple security layers:
+
+- **TLS 1.2/1.3 Enforcement**: All downloads use secure HTTPS connections
+- **Digital Signature Verification**: Ensures the file comes from Kaizer Tech
+- **Certificate Validation**: Checks signing certificate expiration
+- **PE Format Validation**: Verifies file is a legitimate Windows executable
+- **SHA256 Hash Calculation**: Provides cryptographic hash for verification
+- **PowerShell Version Check**: Ensures compatibility with your system
+
+**ميزات الأمان في سكربت التثبيت:**
+
+- **فرض TLS 1.2/1.3**: جميع التنزيلات تستخدم اتصالات HTTPS آمنة
+- **التحقق من التوقيع الرقمي**: يضمن أن الملف يأتي من Kaizer Tech
+- **التحقق من الشهادة**: يفحص صلاحية شهادة التوقيع
+- **التحقق من صيغة PE**: يتأكد من أن الملف برنامج Windows شرعي
+- **حساب SHA256**: يوفر بصمة تشفيرية للتحقق
+- **فحص إصدار PowerShell**: يضمن التوافق مع نظامك
+
+---
+
+### 📦 Alternative: Manual Download | التنزيل اليدوي
+
+If you prefer to download manually:
+
+1. Visit the [Releases page](https://github.com/KaizerAE/KaizerTechWindowsUtility/releases/latest)
+2. Download `KTWU.exe` from the latest release
+3. Verify the digital signature:
+   - Right-click the file → Properties → Digital Signatures tab
+   - Ensure it's signed by "Kaizer Tech"
+4. Run the installer as Administrator
+
+**للتنزيل اليدوي:**
+
+1. قم بزيارة [صفحة الإصدارات](https://github.com/KaizerAE/KaizerTechWindowsUtility/releases/latest)
+2. قم بتنزيل `KTWU.exe` من أحدث إصدار
+3. تحقق من التوقيع الرقمي:
+   - انقر بزر الماوس الأيمن على الملف → خصائص → علامة تبويب التوقيعات الرقمية
+   - تأكد من أنه موقع من قبل "Kaizer Tech"
+4. قم بتشغيل المثبت كمسؤول
+
+---
+
+### ⚙️ System Requirements | متطلبات النظام
+
+- **OS**: Windows 10 version 1809 or later, Windows 11
+- **PowerShell**: Version 5.0 or higher (for installation script)
+- **.NET**: Windows App SDK runtime (auto-installed)
+- **Privileges**: Administrator rights required
+
+**المتطلبات:**
+
+- **نظام التشغيل**: Windows 10 الإصدار 1809 أو أحدث، Windows 11
+- **PowerShell**: الإصدار 5.0 أو أعلى (لسكربت التثبيت)
+- **.NET**: Windows App SDK runtime (يُثبّت تلقائيًا)
+- **الصلاحيات**: مطلوب حقوق المسؤول
+
+---
+
 ## 🏗️ Project Architecture
 
 ### Directory Structure
@@ -28,6 +131,7 @@ KaizerTechWindowsUtility/
 ├── .github/
 │   └── workflows/          # GitHub Actions CI/CD
 ├── Bootstrapper/           # Application bootstrapper
+│   └── get.ps1            # Secure installation script
 ├── KTWU.Core/             # Main application project
 │   ├── Assets/            # Images, icons, and resources
 │   ├── Models/            # Data models
@@ -49,218 +153,101 @@ KaizerTechWindowsUtility/
 ├── TweakManifests/        # JSON tweak definitions
 │   ├── performance.json   # Performance optimizations
 │   ├── privacy.json       # Privacy enhancements
-│   └── explorer.json      # File Explorer customizations
-├── KTWU.Core.sln         # Visual Studio solution
-└── README.md             # This file
+│   ├── visual.json        # Visual customizations
+│   └── network.json       # Network tweaks
+└── KTWU.Core.sln         # Visual Studio solution
 ```
 
 ---
 
-## 🔧 Technology Stack
-
-### Core Technologies
-
-- **Framework**: .NET 7.0+
-- **UI Framework**: WinUI 3 (Windows App SDK)
-- **Architecture**: MVVM (Model-View-ViewModel)
-- **Database**: SQLite with Entity Framework Core
-- **Package Manager**: NuGet
-
-### Key NuGet Packages
-
-```xml
-<PackageReference Include="System.Management.Automation" Version="7.4.0" />
-<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.0" />
-<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0" />
-<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.0" />
-```
-
----
-
-## 🎯 Core Components
-
-### 1. Tweak System
-
-The tweak system is powered by JSON manifests that define system modifications:
-
-**Example: performance.json**
-```json
-[
-  {
-    "id": "PERF_001",
-    "title": "Enable Ultimate Performance Plan",
-    "description": "Activates the 'Ultimate Performance' power plan",
-    "category": "Performance",
-    "targetOS": ["Windows 10", "Windows 11"],
-    "isDangerous": false,
-    "actions": {
-      "apply": [
-        {
-          "type": "powershell",
-          "command": "powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61"
-        }
-      ],
-      "revert": [
-        {
-          "type": "powershell",
-          "command": "powercfg -delete e9a42b02-d5df-448d-aa00-03f14749eb61"
-        }
-      ]
-    }
-  }
-]
-```
-
-### 2. Services Layer
-
-#### TweakService
-- Loads and parses JSON manifests from `TweakManifests/` folder
-- Deserializes tweaks into `Tweak` model objects
-- Provides async API for tweak retrieval
-
-#### PowerShellRunner
-- Executes PowerShell scripts asynchronously
-- Captures output and error streams
-- Provides real-time execution feedback
-
-#### WingetService
-- Wraps Windows Package Manager (winget.exe)
-- Parses command-line output into structured data
-- Provides search and installation capabilities
-
-#### MaintenanceService
-- Executes system maintenance commands (SFC, DISM)
-- Provides live output streaming
-- Requires administrator privileges
-
-#### DatabaseContext (Entity Framework)
-- SQLite database for change tracking
-- Stores applied tweaks with revert actions
-- Enables complete rollback functionality
-
----
-
-## 🚀 Getting Started
+## 🛠️ Development Setup
 
 ### Prerequisites
 
-- **Windows 10 (1809+)** or **Windows 11**
-- **Visual Studio 2022** (17.8+) with:
-  - .NET Desktop Development workload
-  - Universal Windows Platform development workload
-- **.NET 7.0 SDK** or later
-- **PowerShell 7+** (for development/testing)
+1. **Visual Studio 2022** (17.3 or later)
+2. **Windows App SDK** (included in VS installer)
+3. **.NET 7.0 SDK** or later
+4. **Windows 10 SDK** (10.0.19041.0 or later)
 
-### Building the Project
+### Building from Source
 
-1. **Clone the repository**
+1. Clone the repository:
    ```bash
    git clone https://github.com/KaizerAE/KaizerTechWindowsUtility.git
    cd KaizerTechWindowsUtility
    ```
 
-2. **Open in Visual Studio**
+2. Open `KTWU.Core.sln` in Visual Studio 2022
+
+3. Restore NuGet packages:
    ```bash
-   start KTWU.Core.sln
+   dotnet restore
    ```
 
-3. **Restore NuGet packages**
-   - Right-click solution → Restore NuGet Packages
-
-4. **Setup database migrations** (Package Manager Console)
-   ```powershell
-   Add-Migration InitialCreate
-   Update-Database
+4. Build the solution:
+   ```bash
+   dotnet build
    ```
 
-5. **Build and Run**
-   - Press `F5` to build and launch
-   - **Note**: Some features require administrator privileges
-
-### Running as Administrator
-
-For full functionality (system tweaks, maintenance tools), run as administrator:
-
-1. Right-click project → Properties
-2. Application → Manifest Tool → Input and Output
-3. UAC Execution Level → `requireAdministrator`
+5. Run the application:
+   - Set `KTWU.Core` as startup project
+   - Press F5 or click "Start Debugging"
 
 ---
 
-## 📋 Usage Guide
+## 🧩 Key Technologies
 
-### System Tweaks
+### UI Framework
+- **WinUI 3**: Modern Windows UI framework
+- **XAML**: Declarative UI markup
+- **MVVM Pattern**: Clean separation of concerns
 
-1. Navigate to **Tweaks** page
-2. Browse available optimizations by category
-3. Select desired tweaks (dangerous ones are marked with ⚠️)
-4. Click **Apply Selected Tweaks**
-5. Changes are automatically logged to history
+### Backend Services
+- **System.Management.Automation**: PowerShell integration
+- **Microsoft.Win32.Registry**: Registry operations
+- **Entity Framework Core**: Database management
+- **SQLite**: Local storage for change history
 
-### Package Installation
-
-1. Navigate to **Install** page
-2. Search for applications (e.g., "PowerToys")
-3. Select packages from search results
-4. Click **Install Selected**
-5. Monitor real-time installation progress
-
-### System Maintenance
-
-1. Navigate to **Maintenance** page
-2. Choose maintenance tool:
-   - **SFC Scan**: System File Checker
-   - **DISM Restore**: Windows Image repair
-3. View live output in console window
-
-### Change History & Rollback
-
-1. Navigate to **History** page
-2. View all applied tweaks with timestamps
-3. Click **Revert** on any entry to undo changes
-4. Confirmation required for destructive operations
+### Package Management
+- **Windows Package Manager (winget)**: CLI integration
+- **NuGet**: Dependency management
 
 ---
 
-## 🔒 Security Considerations
+## 📋 Tweak System
 
-### Safety Features
+### How It Works
 
-- ✅ All PowerShell scripts are sandboxed
-- ✅ Registry modifications are validated before execution
-- ✅ Dangerous operations require explicit user confirmation
-- ✅ Complete audit trail in SQLite database
-- ✅ Rollback capability for all changes
+1. Tweaks are defined in JSON files in `TweakManifests/`
+2. `TweakService` loads and parses JSON at runtime
+3. Each tweak includes both **Apply** and **Revert** actions
+4. All changes are logged to SQLite database
+5. Users can rollback changes from the History page
 
-### Best Practices
+### Example Tweak Definition
 
-- Always create a system restore point before applying tweaks
-- Review tweak descriptions carefully
-- Test on non-critical systems first
-- Keep database backups (`ktwu_history.db`)
+```json
+{
+  "id": "disable-telemetry",
+  "name": "Disable Windows Telemetry",
+  "description": "Disables Windows diagnostic data collection",
+  "category": "Privacy",
+  "isDangerous": false,
+  "applyAction": {
+    "type": "powershell",
+    "command": "Set-ItemProperty -Path 'HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection' -Name 'AllowTelemetry' -Value 0"
+  },
+  "revertAction": {
+    "type": "powershell",
+    "command": "Set-ItemProperty -Path 'HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection' -Name 'AllowTelemetry' -Value 1"
+  }
+}
+```
 
----
+### Benefits
 
-## 🛠️ Development
-
-### Adding New Tweaks
-
-1. Create/edit JSON file in `TweakManifests/`
-2. Follow the schema:
-   ```json
-   {
-     "id": "UNIQUE_ID",
-     "title": "Tweak Name",
-     "description": "What this does",
-     "category": "Category Name",
-     "targetOS": ["Windows 10", "Windows 11"],
-     "isDangerous": false,
-     "actions": {
-       "apply": [{ "type": "powershell", "command": "..." }],
-       "revert": [{ "type": "powershell", "command": "..." }]
-     }
-   }
-   ```
+1. Easy to add new tweaks without code changes
+2. Version-controllable tweak definitions
 3. No recompilation needed - JSON is loaded at runtime
 
 ### Supported Action Types
