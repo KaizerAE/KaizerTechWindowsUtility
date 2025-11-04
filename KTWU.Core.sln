@@ -1,0 +1,32 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+
+# Kaizer Tech's Windows Utility (KTWU) Solution
+# This solution file will contain the main WinUI 3 application project
+# 
+# TODO: Add project references when the .csproj files are created
+# Example:
+# Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KTWU.Core", "KTWU.Core\KTWU.Core.csproj", "{GUID}"
+# EndProject
+
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00000000-0000-0000-0000-000000000000}
+	EndGlobalSection
+EndGlobal
