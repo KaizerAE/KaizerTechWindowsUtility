@@ -1,0 +1,24 @@
+[
+  {
+    "id": "TWEAK_PRIVACY_001",
+    "title": "Disable Telemetry Service",
+    "description": "Stops and disables the 'DiagTrack' service which sends diagnostic data to Microsoft.",
+    "category": "Privacy",
+    "targetOS": ["Windows 10", "Windows 11"],
+    "isDangerous": false,
+    "actions": {
+      "apply": [
+        {
+          "type": "powershell",
+          "command": "Set-Service -Name 'DiagTrack' -StartupType Disabled; Stop-Service -Name 'DiagTrack'"
+        }
+      ],
+      "revert": [
+        {
+          "type": "powershell",
+          "command": "Set-Service -Name 'DiagTrack' -StartupType Automatic; Start-Service -Name 'DiagTrack'"
+        }
+      ]
+    }
+  }
+]
