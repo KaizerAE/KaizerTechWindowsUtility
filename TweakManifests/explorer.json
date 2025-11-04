@@ -1,0 +1,30 @@
+[
+  {
+    "id": "TWEAK_EXPLORER_001",
+    "title": "Show File Extensions",
+    "description": "Shows file extensions (like .txt, .exe) in File Explorer for better file identification.",
+    "category": "Explorer",
+    "targetOS": ["Windows 10", "Windows 11"],
+    "isDangerous": false,
+    "actions": {
+      "apply": [
+        {
+          "type": "registry",
+          "path": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
+          "name": "HideFileExt",
+          "value": 0,
+          "valueType": "DWORD"
+        }
+      ],
+      "revert": [
+        {
+          "type": "registry",
+          "path": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
+          "name": "HideFileExt",
+          "value": 1,
+          "valueType": "DWORD"
+        }
+      ]
+    }
+  }
+]
